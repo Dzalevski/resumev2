@@ -4,20 +4,22 @@ languageCode = "en-us"
 theme        = "dd"
 paginate     = 10
 
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
+   footerLeft = "<a></a>"
+   footerRight = "<a></a>"
 
   # Subtitle for home
   homeSubtitle = "Software Engineer /Go Mage"
-  github = ''
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
-  # Enable sharing buttons, if you linke
+  # Enable sharing buttons, if you link
   enableSharingButtons = true
 
   # Metadata mostly used in document's head
@@ -74,5 +76,4 @@ paginate     = 10
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/9807296/dzalevski"
-  footerLeft = ""
-  footerRight = ""
+
