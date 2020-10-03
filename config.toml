@@ -1,5 +1,5 @@
-baseurl      = "localhost"
-title        = "My Blog"
+baseurl      = "https://darkodjalevski.me/"
+title        = "Darko Djalevski"
 languageCode = "en-us"
 theme        = "dd"
 paginate     = 10
