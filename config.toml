@@ -74,3 +74,5 @@ paginate     = 10
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/9807296/dzalevski"
+  footerLeft = ""
+  footerRight = ""
