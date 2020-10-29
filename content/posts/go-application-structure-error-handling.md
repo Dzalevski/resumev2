@@ -13,8 +13,6 @@ date: "2020-10-29"
 #### /pkg
 - This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project.
 
-#### Structure example
-![img](static/images/structure.png)
 
 ### 2. Go error handling
 `Go` does not provide conventional try/catch method to handle the `errors` instead, `errors` are returned as a normal return value.
@@ -53,5 +51,4 @@ So if the error occurs in FuncStore and we log the error on FuncHandler the erro
 
 `level=error msg="error in handler" error="error in service: error in store: Error:"query error"`
 
-
-
+It's readable the code is not messy with a lot of logs and it's easy trackable where the `error` occur and what is the error.
