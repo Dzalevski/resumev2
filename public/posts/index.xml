@@ -1,20 +1,94 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Darko Djalevski</title>
-    <link>https://darkodjalevski.me/posts/</link>
-    <description>Recent content in Posts on Darko Djalevski</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2020 15:59:03 +0200</lastBuildDate><atom:link href="https://darkodjalevski.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://darkodjalevski.me/posts/my-first-post/</link>
-      <pubDate>Sat, 03 Oct 2020 15:59:03 +0200</pubDate>
-      
-      <guid>https://darkodjalevski.me/posts/my-first-post/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Posts on Darko Djalevski</title>
+        <link>https://darkodjalevski.me/posts/</link>
+        <description>Recent content in Posts on Darko Djalevski</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Darko Djalevski</copyright>
+        <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://darkodjalevski.me/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Go application architecture and error handling</title>
+            <link>https://darkodjalevski.me/posts/go-application-structure-error-handling/</link>
+            <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://darkodjalevski.me/posts/go-application-structure-error-handling/</guid>
+            <description>In this article, we are going to explore how to structure Go application and error handling.
+1. Go application architecture /cmd  This folder contains the main application entry point files for the project, with the directory name matching the name for the binary. So for example cmd/send-email meaning that the binary we publish will be send-email.  /pkg  This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project.</description>
+            <content type="html"><![CDATA[<p>In this article, we are going to explore how to structure <code>Go</code> application and <code>error</code> handling.</p>
+<h3 id="1-go-application-architecture">1. Go application architecture</h3>
+<h4 id="cmd">/cmd</h4>
+<ul>
+<li>This folder contains the main application entry point files for the project, with the directory name matching the name for the binary. So for example cmd/send-email meaning that the binary we publish will be send-email.</li>
+</ul>
+<h4 id="pkg">/pkg</h4>
+<ul>
+<li>This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project.</li>
+</ul>
+<h3 id="structure-example">Structure example</h3>
+<p><img src="img/structure.png" alt="structure"></p>
+<h3 id="2-go-error-handling">2. Go error handling</h3>
+<p><code>Go</code> does not provide conventional try/catch method to handle the <code>errors</code> instead, <code>errors</code> are returned as a normal return value.</p>
+<p>Let&rsquo;s assume that we have API call, that is located in <em>/pkg/handlers/handler.go</em>
+Handler is calling some service function from <em>/pkg/services/service.go</em>
+Service is calling some store method from <em>/pkg/store/store.go</em>. All functions are returning error as value.
+Instead of logging  all errors in every function we should wrap the the error from store.go after that wrap the error in service.go and log the error or handle it in handler.go.</p>
+<p>Show me the code talk is cheap. :)
+This should look something like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">FuncHandler</span>() {
+	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">FuncService</span>()
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error in handler:%w&#34;</span>,<span style="color:#a6e22e">err</span>)
+	}
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">FuncService</span>() {
+	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">FuncStore</span>()
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error in service:%w&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">FuncStore</span>() {
+	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Query</span>(<span style="color:#a6e22e">dosmth</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error in store:%w&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+}
+
+</code></pre></div><p>So if the error occurs in FuncStore and we log the error on FuncHandler the error message will be:</p>
+<pre><code class="language-log" data-lang="log">level=error msg=&quot;error in handler&quot; error=&quot;error in service: error in store: Error:&quot;query error&quot;
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Tips for learning Golang</title>
+            <link>https://darkodjalevski.me/posts/tips-for-learning-go/</link>
+            <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://darkodjalevski.me/posts/tips-for-learning-go/</guid>
+            <description>1. The Little Go Book The Little Go Book is old, but it&amp;rsquo;s a very good start and It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing.
+2. Don&amp;rsquo;t skip the fundamentals Go has a very readable language spec that was clearly written to be read and understood, even if you don&amp;rsquo;t have a master&amp;rsquo;s in language or compiler theory. Reading language spec document alongside Effective Go, another great resource from the Golang creators, will give you a huge boost in readiness to use the language effectively and properly.</description>
+            <content type="html"><![CDATA[<h2 id="1-the-little-go-book">1. The Little Go Book</h2>
+<p><a href="https://openmymind.net/The-Little-Go-Book/">The Little Go Book</a> is old, but it&rsquo;s a very good start and It&rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing.</p>
+<h2 id="2-dont-skip-the-fundamentals">2. Don&rsquo;t skip the fundamentals</h2>
+<p>Go has a very readable <a href="https://golang.org/ref/spec">language spec</a> that was clearly written to be read and understood, even if you don&rsquo;t have a master&rsquo;s in language or compiler theory.
+Reading language spec document alongside <a href="https://golang.org/doc/effective_go.html">Effective Go</a>, another great resource from the Golang creators, will give you a huge boost in readiness to use the language effectively and properly.</p>
+<h2 id="3-use-good-language-tools">3. Use good language tools</h2>
+<p>Go have a very strict typing rule so everybody&rsquo;s code will be the same.
+You will quickly learn about go fmt and the power of it.</p>
+<p><code>gofmt</code> is built into the language runtime, and it formats Go code according to a set of stable, well-understood language rules.</p>
+<p>I strongly recommend using an editor or IDE with good Golang support features.
+I prefer <a href="https://www.jetbrains.com/go/promo/?gclid=EAIaIQobChMI06CSiJid7AIVSPiyCh3K3QJrEAAYASAAEgLEufD_BwE">GoLand</a> but since is not free <a href="https://code.visualstudio.com/">Code Visual Studio</a> have very good plugins for Go too.</p>
+<h2 id="4-start-typing-some-code">4. Start typing some code</h2>
+<ul>
+<li>I strongly recommend to start typing and learn about go concepts from  <a href="https://gobyexample.com/">Go by example</a> hands-on introduction to Go using annotated example programs.</li>
+<li><a href="https://tour.golang.org/welcome/1">Tour of Go</a></li>
+</ul>
+<h2 id="5-simple-restful-api">5. Simple RESTful API</h2>
+<p>For last you can make simple RESTful API using go and one of supported database plugins, I recommend <code>mysql</code> for start.</p>
+]]></content>
+        </item>
+        
+    </channel>
 </rss>

@@ -6,14 +6,37 @@
     <description>Recent content on Darko Djalevski</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2020 15:59:03 +0200</lastBuildDate><atom:link href="https://darkodjalevski.me/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Darko Djalevski</copyright>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://darkodjalevski.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://darkodjalevski.me/posts/my-first-post/</link>
-      <pubDate>Sat, 03 Oct 2020 15:59:03 +0200</pubDate>
+      <title>Go application architecture and error handling</title>
+      <link>https://darkodjalevski.me/posts/go-application-structure-error-handling/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://darkodjalevski.me/posts/my-first-post/</guid>
-      <description></description>
+      <guid>https://darkodjalevski.me/posts/go-application-structure-error-handling/</guid>
+      <description>In this article, we are going to explore how to structure Go application and error handling.
+1. Go application architecture /cmd  This folder contains the main application entry point files for the project, with the directory name matching the name for the binary. So for example cmd/send-email meaning that the binary we publish will be send-email.  /pkg  This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project.</description>
+    </item>
+    
+    <item>
+      <title>Tips for learning Golang</title>
+      <link>https://darkodjalevski.me/posts/tips-for-learning-go/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkodjalevski.me/posts/tips-for-learning-go/</guid>
+      <description>1. The Little Go Book The Little Go Book is old, but it&amp;rsquo;s a very good start and It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing.
+2. Don&amp;rsquo;t skip the fundamentals Go has a very readable language spec that was clearly written to be read and understood, even if you don&amp;rsquo;t have a master&amp;rsquo;s in language or compiler theory. Reading language spec document alongside Effective Go, another great resource from the Golang creators, will give you a huge boost in readiness to use the language effectively and properly.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://darkodjalevski.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkodjalevski.me/about/</guid>
+      <description>Hello there! I’m a software engineer in Skopje, Macedonia with a passion for computers, programming and designing and developing distributed systems. I have 2 years of experience as a backend engineer with a focus on distributed systems, designing APIs and microservices.
+Currently I’m working at InPlayer as Backend engineer
+In my free time, I love working on open-source software, programming in Go as well as dabbling with the latest tools and technologies, and testing new stuff out on my pet projects.</description>
     </item>
     
   </channel>

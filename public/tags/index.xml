@@ -5,6 +5,7 @@
     <link>https://darkodjalevski.me/tags/</link>
     <description>Recent content in Tags on Darko Djalevski</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://darkodjalevski.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Darko Djalevski</copyright><atom:link href="https://darkodjalevski.me/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -4,29 +4,38 @@
   
   <url>
     <loc>https://darkodjalevski.me/</loc>
-    <lastmod>2020-10-03T15:59:03+02:00</lastmod>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darkodjalevski.me/posts/my-first-post/</loc>
-    <lastmod>2020-10-03T15:59:03+02:00</lastmod>
+    <loc>https://darkodjalevski.me/posts/go-application-structure-error-handling/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://darkodjalevski.me/posts/</loc>
-    <lastmod>2020-10-03T15:59:03+02:00</lastmod>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darkodjalevski.me/categories/</loc>
+    <loc>https://darkodjalevski.me/posts/tips-for-learning-go/</loc>
+    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darkodjalevski.me/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darkodjalevski.me/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darkodjalevski.me/series/</loc>
   </url>
   
   <url>
     <loc>https://darkodjalevski.me/tags/</loc>
   </url>
-
-  <url>
-    <loc>https://darkodjalevski.me/about/</loc>
-  </url>
-
+  
 </urlset>

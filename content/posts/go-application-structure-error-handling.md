@@ -15,7 +15,7 @@ date: "2020-10-04"
 
 ### Structure example
 
-![structure](img/structure.png)
+![strucdarture](structure.png)
 
 ### 2. Go error handling
 `Go` does not provide conventional try/catch method to handle the `errors` instead, `errors` are returned as a normal return value.
@@ -49,7 +49,9 @@ func FuncStore() {
 }
 
 ````
+
 So if the error occurs in FuncStore and we log the error on FuncHandler the error message will be:
+
 
 ```log
 level=error msg="error in handler" error="error in service: error in store: Error:"query error"
