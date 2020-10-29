@@ -44,15 +44,12 @@ func FuncStore() {
 		return fmt.Errorf("error in store:%w", err)
 	}
 }
-
-````
+```
 
 So if the error occurs in FuncStore and we log the error on FuncHandler the error message will be:
 
 
-```log
-level=error msg="error in handler" error="error in service: error in store: Error:"query error"
-```
+`level=error msg="error in handler" error="error in service: error in store: Error:"query error"`
 
 
 
