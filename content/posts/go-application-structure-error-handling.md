@@ -1,7 +1,7 @@
 ---
 title: "Go application architecture and error handling"
 draft: false
-date: "2020-10-04"
+date: "2020-10-29"
 ---
 
  In this article, we are going to explore how to structure `Go` application and `error` handling.
