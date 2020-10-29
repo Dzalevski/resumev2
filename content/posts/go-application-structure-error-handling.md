@@ -13,9 +13,6 @@ date: "2020-10-29"
 #### /pkg
 - This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project.
 
-### Structure example
-
-![strucdarture](structure.png)
 
 ### 2. Go error handling
 `Go` does not provide conventional try/catch method to handle the `errors` instead, `errors` are returned as a normal return value.
