@@ -3,8 +3,8 @@ title: "Custom API Calls params validator with go validator"
 draft: false
 date: "2020-11-27"
 ---
-
- ## In this article, we are going to explore how to make custom validator with `go validator`
+ 
+ # In this article, we are going to explore how to make custom validator with `go validator`
 
  *This custom validator is made with my best friend and coding buddy Gligor - link to his github account https://github.com/Gligor23*
 
