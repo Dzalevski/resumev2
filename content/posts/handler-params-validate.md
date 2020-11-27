@@ -189,6 +189,7 @@ func PostAccount() {
 
 * Error which will be shown to end user will be descriptive and easy to understand.
 -- if he fail `Password` lenght or incorrect `email` he will recieve error message with both of errors:
+
 ```JSON
 	"code": 400
 	"message" : "Invalid parameters, please try again"
