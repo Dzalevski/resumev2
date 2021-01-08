@@ -104,9 +104,9 @@ func Validator() *validator.Validate {
 ```Go
 // Using "validate" in structure to validate param and use name of param from form:"bla"
 func initValidator() {
-	MBValidator = validator.New()
-	MBValidator.SetTagName("validate")
-	MBValidator.RegisterTagNameFunc(func(fld reflect.StructField) string {
+	MyCustomValidator = validator.New()
+	MyCustomValidator.SetTagName("validate")
+	MyCustomValidator.RegisterTagNameFunc(func(fld reflect.StructField) string {
 		name := strings.SplitN(fld.Tag.Get("form"), ",", 2)[0]
 		return name
 	})
@@ -138,15 +138,15 @@ func(fl validator.FieldLevel) ValidateAlphaHypenNumTag bool {
 ```Go
 // Using "validate" in structure to validate param and use name of param from form:"bla"
 func initValidator() {
-	MBValidator = validator.New()
-	MBValidator.SetTagName("validate")
-	MBValidator.RegisterTagNameFunc(func(fld reflect.StructField) string {
+	MyCustomValidator = validator.New()
+	MyCustomValidator.SetTagName("validate")
+	MyCustomValidator.RegisterTagNameFunc(func(fld reflect.StructField) string {
 		name := strings.SplitN(fld.Tag.Get("form"), ",", 2)[0]
 		return name
 	})
 
 	// RegisterValidation needs tag name and function which will do the validation.
-	err := MBValidator.RegisterValidation("alphanumhyphen", b ValidateAlphaHypenNumTag) {
+	err := MyCustomValidator.RegisterValidation("alphanumhyphen", b ValidateAlphaHypenNumTag) {
 		return b
 	})
 	if err != nil {
