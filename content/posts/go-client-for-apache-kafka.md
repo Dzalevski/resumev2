@@ -1,8 +1,8 @@
 
 ---
-title: "Go client for Apache Kafka"
-draft: true
-date: "2021-01-08"
+title: "Go & Apache Kafka"
+draft: false
+date: "2021-02-23"
 ---
 
 
@@ -177,8 +177,6 @@ Message processing is real problem for systems like Apache Kafka
 Implementation of a consumer that processes messages immediately just after receiving them from the Kafka topic is very straightforward. Unfortunately, the reality is much more complicated and the message processing might fail because of various reasons. Some of those reasons are permanent problems, like failure on the database constraint or invalid message format. Others, like temporary unavailability of a dependent system that is involved in message handling, can be resolved in the future. In those cases retrying of the message processing might be a valid solution.
 
 So you can implement your simple logic for retrying messages on some type of errors.
-
-More about retrying messages consumer in the next posts.
 
 ## Delivery guarantees
 
