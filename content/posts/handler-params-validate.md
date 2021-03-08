@@ -5,7 +5,7 @@ date: "2020-11-27"
 ---
  
 
- *This custom validator is made with my best friend and coding buddy Gligor - link to his github account https://github.com/Gligor23*
+ *This custom validator is made with my best friend and coding buddy Gligor - link to his [github](https://github.com/Gligor23) account, his personal [blog](https://www.gudgl.me/)*
 
 
 ### 1. Custom ValidationError Structure file.
