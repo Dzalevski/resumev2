@@ -7,11 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Darko Djalevski</copyright>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://darkodjalevski.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://darkodjalevski.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contribute to Open Source Project for begginers</title>
+      <link>https://darkodjalevski.me/posts/contribute-to-open-source/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkodjalevski.me/posts/contribute-to-open-source/</guid>
+      <description>What is open source software? Open source software is software with source code that anyone can inspect, modify, and enhance.
+&amp;ldquo;Source code&amp;rdquo; is the part of software that most computer users don&amp;rsquo;t ever see; it&amp;rsquo;s the code computer programmers can manipulate to change how a piece of software—a &amp;ldquo;program&amp;rdquo; or &amp;ldquo;application&amp;rdquo;—works. Programmers who have access to a computer program&amp;rsquo;s source code can improve that program by adding features to it or fixing parts that don&amp;rsquo;t always work correctly.</description>
+    </item>
+    
+    <item>
+      <title>Go &amp; Apache Kafka</title>
+      <link>https://darkodjalevski.me/posts/go-client-for-apache-kafka/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkodjalevski.me/posts/go-client-for-apache-kafka/</guid>
+      <description>Kafka Go Client Installation There are a few go-kafka clients but i prefer the client from confluent
+The Go client, called confluent-kafka-go, is distributed viaGitHub andgopkg.in to pin to specific versions. The Go client uses librdkafka, the C client, internally and exposes it as Go library usingcgo. No separate installation of librdkafka is required for the supported platforms (Linux (glibc and musl based), and Mac OSX).
+For other platforms the following instructions still apply: To install the Go client, first installthe C client including its development package as well as a C build toolchain including pkg-config.</description>
+    </item>
+    
+    <item>
+      <title>Custom API Calls params validator with go validator</title>
+      <link>https://darkodjalevski.me/posts/handler-params-validate/</link>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkodjalevski.me/posts/handler-params-validate/</guid>
+      <description>This custom validator is made with my best friend and coding buddy Gligor - link to his github account, his personal blog
+1. Custom ValidationError Structure file.  First we need to create our custom ValidationError structure  // ValidationError represents custom validation error structure // using this error when validating request body type ValidationError struct { Message string `json:&amp;#34;message&amp;#34;` Errors map[string]string `json:&amp;#34;errors,omitempty&amp;#34;` ValidationErrors validator.ValidationErrors `json:&amp;#34;-&amp;#34;` } Care we need to use go validator v10 - github.</description>
+    </item>
+    
     <item>
       <title>Go application architecture and error handling</title>
       <link>https://darkodjalevski.me/posts/go-application-structure-error-handling/</link>
-      <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://darkodjalevski.me/posts/go-application-structure-error-handling/</guid>
       <description>In this article, we are going to explore how to structure Go application and error handling.

@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/djale/resumev2/darkodjalevski",
+	"sourceRoot": "/Users/darko.djalevski/Documents/projects/resumev2",
 	"sources": [
 		"themes/dd/assets/scss/main.scss",
 		"themes/dd/assets/scss/_normalize.scss",

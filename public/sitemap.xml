@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://darkodjalevski.me/posts/contribute-to-open-source/</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://darkodjalevski.me/</loc>
-    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darkodjalevski.me/posts/go-application-structure-error-handling/</loc>
-    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://darkodjalevski.me/posts/</loc>
-    <lastmod>2020-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://darkodjalevski.me/posts/go-client-for-apache-kafka/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://darkodjalevski.me/posts/handler-params-validate/</loc>
+    <lastmod>2020-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://darkodjalevski.me/posts/go-application-structure-error-handling/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://darkodjalevski.me/posts/tips-for-learning-go/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://darkodjalevski.me/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://darkodjalevski.me/blog/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://darkodjalevski.me/series/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://darkodjalevski.me/tags/</loc>
   </url>
-  
 </urlset>
