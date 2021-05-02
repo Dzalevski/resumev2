@@ -46,7 +46,9 @@ You can learn more tips for learning Go in my [Post]({{< ref "/posts/tips-for-le
 ## Tools & Helpers
 You need to explore the tools,helpers and etc which helps the developers to make less common code, style and structure mistakes
 #### Go - Tools & Helpers
+
 All of referenced tools & helpers are used across the all OSS Projects written in Go.
+
 - [Staticcheck](https://staticcheck.io) - staticcheck is advanced go-linter
 - [Go Linter](https://github.com/golang/lint) - Golint is a linter for Go source code.
 - [Err Check](https://github.com/kisielk/errcheck) - Errcheck is a program for checking for unchecked errors in Go programs.
