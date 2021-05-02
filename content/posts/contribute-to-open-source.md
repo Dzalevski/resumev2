@@ -39,7 +39,7 @@ one of the most popular version control tools (also known as revision control to
 You must master the concepts of the given language you are learning & coding in.
 
 #### Go - Code Language Skills
-You can learn more tips for learning Go in my [Post]({{< ref "/posts//tips-for-learning-go" >}} "Go Tips & Tricks for learning")
+You can learn more tips for learning Go in my [Post]({{< ref "/posts/tips-for-learning-go" >}} "Go Tips & Tricks for learning")
 
 
 
@@ -59,7 +59,7 @@ It's open software so it's open-minded - that means you need to expect to explor
 - So first step is to explore the structure of the project.
 - ask the community for any questions you have.
 - Running the project local is very important step before you start to change/add anything.
-- General Go app structure -  [GenGo Structure]({{< ref "/posts//go-application-structure-error-handling" >}})
+- General Go app structure -  [GenGo Structure]({{< ref "/posts/go-application-structure-error-handling" >}})
 - Explore the external libraries that are used in the project.
 
 \
