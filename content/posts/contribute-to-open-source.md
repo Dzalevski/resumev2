@@ -63,7 +63,7 @@ It's open software so it's open-minded - that means you need to expect to explor
 - Running the project local is very important step before you start to change/add anything.
 - General Go app structure -  [GenGo Structure]({{< ref "/posts/go-application-structure-error-handling" >}})
 - Explore the external libraries that are used in the project.
-- Explore the issues of the project and try to help some issue to bi resolved. 
+- Explore the issues of the project and try to help some issue to be resolved. 
 
 \
 \
