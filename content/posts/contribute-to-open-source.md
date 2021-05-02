@@ -1,6 +1,6 @@
 ---
 title: "Contribute to Open Source Project for begginers"
-draft: true
+draft: false
 date: "2021-05-02"
 ---
 ## What is open source software?
@@ -60,6 +60,7 @@ It's open software so it's open-minded - that means you need to expect to explor
 - ask the community for any questions you have.
 - Running the project local is very important step before you start to change/add anything.
 - General Go app structure -  [GenGo Structure]({{< ref "/posts//go-application-structure-error-handling" >}})
+- Explore the external libraries that are used in the project.
 
 \
 \
