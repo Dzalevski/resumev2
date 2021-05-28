@@ -42,7 +42,6 @@ You must master the concepts of the given language you are learning & coding in.
 You can learn more tips for learning Go in my [Post]({{< ref "/posts/tips-for-learning-go" >}} "Go Tips & Tricks for learning")
 
 
-
 ## Tools & Helpers
 You need to explore the tools, helpers and et cetera which helps the developers to make less common code, style and structure mistakes
 #### Go - Tools & Helpers
