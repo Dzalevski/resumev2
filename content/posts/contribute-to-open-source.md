@@ -44,7 +44,7 @@ You can learn more tips for learning Go in my [Post]({{< ref "/posts/tips-for-le
 
 
 ## Tools & Helpers
-You need to explore the tools, helpers and etc which helps the developers to make less common code, style and structure mistakes
+You need to explore the tools, helpers and et cetera which helps the developers to make less common code, style and structure mistakes
 #### Go - Tools & Helpers
 
 All of referenced tools & helpers are used across the all OSS Projects written in Go.
